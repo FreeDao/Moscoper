@@ -1045,7 +1045,6 @@ public class UpdateProductActivity extends BaseActivity {
 					ExceptionRemHelper.showExceptionReport(
 							UpdateProductActivity.this, exception);
 				} else {
-					System.out.println("=====update_product_failed_rem=======");
 					Toast.makeText(UpdateProductActivity.this,
 							R.string.update_product_failed_rem,
 							Toast.LENGTH_SHORT).show();
