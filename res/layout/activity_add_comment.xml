@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_fa" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rateBarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbarLayout"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginTop="12.0dip" >
+
+        <TextView
+            android:id="@+id/tvRatePrefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18.0sp"
+            android:text="评分:"
+            android:layout_marginRight="12dip" />
+
+        <RatingBar
+            android:id="@+id/rateBar_01"
+            style="@style/commentRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvRatePrefix"
+            android:indeterminate="false"
+            android:max="5"
+            android:numStars="5"
+            android:progress="3"
+            android:stepSize="1" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/content_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rateBarLayout"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginTop="12.0dip"
+        android:gravity="left"
+        android:hint="@string/add_comment_hint_text"
+        android:imeOptions="actionNext"
+        android:inputType="textMultiLine"
+        android:padding="10.0dip"
+        android:textColor="@color/gray_9"
+        android:textSize="14.0dip" />
+
+</RelativeLayout>

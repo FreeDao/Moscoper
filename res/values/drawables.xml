@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="update_progressbar_color">#ff0b91cf</item>
+    <item type="drawable" name="update_progressbar_bg_color">#ff5b5b5b</item>
+    <item type="drawable" name="menu_item_pressed">#ff2a2b2c</item>
+    <item type="drawable" name="menu_item_normal">#ff333537</item>
+    <item type="drawable" name="yellow">#ff00ff00</item>
+    <item type="drawable" name="white">#ffffffff</item>
+    <item type="drawable" name="white_fog">#66ffffff</item>
+    <item type="drawable" name="orange">#ffff6611</item>
+    <item type="drawable" name="black_26">#ff262626</item>
+    <item type="drawable" name="color_transparent">#01000000</item>
+    <item type="drawable" name="more_item">#ff37393a</item>
+    <item type="drawable" name="devote_header_bg">#ff383838</item>
+    <item type="drawable" name="black">#ff000000</item>
+    <item type="drawable" name="tab_seperator">#ff1d1d1d</item>
+    <item type="drawable" name="tab_normal">#ff252525</item>
+    <item type="drawable" name="tab_highlight">#ff2a2b2c</item>
+</resources>

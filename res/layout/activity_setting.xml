@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_fa" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <View
+        android:id="@+id/dividerView1"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:layout_below="@+id/topbarLayout" />
+
+    <LinearLayout
+        android:id="@+id/group_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dividerView1"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/settings_enable_push"
+            layout="@layout/setting_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_1"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/user_info"
+            layout="@layout/setting_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_6"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/settings_item_selector"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/settings_update_password"
+            layout="@layout/setting_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_2"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/settings_qrcode"
+            layout="@layout/setting_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_3"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@drawable/settings_item_selector"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/settings_check_update"
+            layout="@layout/setting_item" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <include
+            android:id="@+id/settings_feedback"
+            layout="@layout/setting_item" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <include
+            android:id="@+id/settings_about"
+            layout="@layout/setting_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_4"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/settings_login"
+            layout="@layout/setting_item" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <include
+            android:id="@+id/settings_logout"
+            layout="@layout/setting_item" />
+    </LinearLayout>
+
+</RelativeLayout>

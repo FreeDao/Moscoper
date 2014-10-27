@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_fa"
+        android:paddingBottom="10dip"
+        android:paddingTop="20dip" >
+
+        <ImageView
+            android:id="@+id/product_logo"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginLeft="25dip"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dip"
+            android:layout_marginTop="5dip"
+            android:layout_toLeftOf="@+id/category_name"
+            android:layout_toRightOf="@+id/product_logo"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="分类:矿石"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/product_add_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/category_name"
+            android:layout_below="@+id/category_name"
+            android:layout_marginTop="12dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="发布于  08/09 11:22"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/extra_info"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_below="@+id/product_logo"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/fav_count_layout"
+                android:layout_width="58.0dip"
+                android:layout_height="36.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@color/line_color"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/fav_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/faved_tag"
+                    android:textColor="@color/gray_9"
+                    android:textSize="10.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attention_count_layout"
+                android:layout_width="58.0dip"
+                android:layout_height="36.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@color/white_fa"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/attention_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attentioned_tag"
+                    android:textColor="@color/gray_9"
+                    android:textSize="10.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/visit_num_layout"
+                android:layout_width="58.0dip"
+                android:layout_height="36.0dip"
+                android:layout_marginRight="2.0dip"
+                android:background="@color/white_fa"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/visit_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/blue"
+                    android:textSize="12.0dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visited_tag"
+                    android:textColor="@color/gray_9"
+                    android:textSize="10.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/product_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/extra_info"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="12dip"
+            android:hint="@string/product_detail_desc_hint"
+            android:textColor="@color/gray_b7"
+            android:textColorHint="@color/gray_b7"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/product_param_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_description"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="4.0" >
+
+                <TextView
+                    android:id="@+id/product_supplier_prefix"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="发布人:"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/product_supplier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="5dip"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/attention_supplier_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/tag_shape"
+                    android:padding="5dip"
+                    android:text="访问空间"
+                    android:textColor="@color/white"
+                    android:textSize="15dip" />
+
+                <TextView
+                    android:id="@+id/praise_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/tag_shape"
+                    android:padding="5dip"
+                    android:text="赞"
+                    android:textColor="@color/white"
+                    android:textSize="15dip" />
+
+                <TextView
+                    android:id="@+id/black_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/tag_shape"
+                    android:padding="5dip"
+                    android:text="屏蔽"
+                    android:textColor="@color/white"
+                    android:textSize="15dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip" >
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="企业006"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!-- 放置自定义标签 -->
+
+            <com.skycober.mineral.widget.UnScrollGridView
+                android:id="@+id/otherAttrGV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dip" >
+            </com.skycober.mineral.widget.UnScrollGridView>
+        </LinearLayout>
+
+        <com.skycober.mineral.widget.HorizontalListView
+            android:id="@+id/lvPic"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_below="@+id/product_param_layout"
+            android:layout_marginTop="10dip" >
+        </com.skycober.mineral.widget.HorizontalListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/middle_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-1dip"
+        android:background="@color/line_color"
+        android:paddingBottom="8dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:paddingTop="8dip" >
+
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="15dip"
+            android:paddingTop="4dip"
+            android:text="评论  0"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/btnReport"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/btnOperation"
+            android:background="@drawable/tag_shape"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tvReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="举报"
+                android:textColor="@color/white_ee"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnOperation"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/tag_shape"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tvOperation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="收藏"
+                android:textColor="@color/white_ee"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

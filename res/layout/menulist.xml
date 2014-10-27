@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fefef6" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/slide_titile_bar_height"
+            android:background="@drawable/bg_title"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dip"
+                android:src="@drawable/main_page_app_name_logo_2" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn11"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_home"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_home_page_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <!--
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_home"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_review_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+        -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn08"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_login"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_login_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:background="@drawable/bg_title"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/sidebar_group_manage_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sidebar_header_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_search"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_find_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn03"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_push"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_my_send_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn04"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_star"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_my_fav_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn05"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_friend"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_my_attention_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+        <!-- 我的关注 -->
+
+		
+        <Button
+            android:id="@+id/company"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_update"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_my_company_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_about"
+            android:drawablePadding="6dp"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_black_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+        
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:background="@drawable/bg_title"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/sidebar_group_setting_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sidebar_header_textsize" />
+
+        <!--
+             <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn06"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_welfare"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_my_interest_text"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sidebar_item_textsize" />
+        -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+
+        <Button
+            android:id="@+id/sidebar_btn07"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sidebar_btn_selector"
+            android:drawableLeft="@drawable/menu_icon_setting"
+            android:drawablePadding="6dip"
+            android:gravity="left|center_vertical"
+            android:paddingBottom="@dimen/sidebar_item_paddingbottom"
+            android:paddingLeft="@dimen/sidebar_item_paddingleft"
+            android:paddingTop="@dimen/sidebar_item_paddingtop"
+            android:text="@string/sidebar_btn_setting_text"
+            android:textColor="@color/black_11"
+            android:textSize="@dimen/sidebar_item_textsize" />
+        
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_color" />
+    </LinearLayout>
+
+</ScrollView>

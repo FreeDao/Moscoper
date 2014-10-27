@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/box_city"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/category_list_group_bg"
+        android:gravity="left|center_vertical"
+        android:padding="5dip"
+        android:textColor="@color/white_ee"
+        android:textSize="@dimen/menu_item_size" />
+
+    <com.skycober.mineral.widget.UnScrollGridView
+        android:id="@+id/gv_category"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" >
+    </com.skycober.mineral.widget.UnScrollGridView>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/app_background" >
+
+    <LinearLayout
+        android:id="@+id/search_input_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/reply_editor_height"
+        android:layout_marginTop="45.0dip"
+        android:background="@color/menu_title_bg"
+        android:orientation="horizontal"
+        android:padding="6.0dip" >
+
+        <EditText
+            android:id="@+id/search_keyword"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/input_box"
+            android:gravity="left|center"
+            android:hint="@string/hint_search"
+            android:imeOptions="actionNone"
+            android:maxLength="70"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="24.0dip"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14.0dip" />
+
+        <Button
+            android:id="@+id/do_search"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/input_reply_btn"
+            android:text="@string/search"
+            android:textColor="@color/white_fa"
+            android:textSize="14.0dip" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clear_search_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60.0dip"
+        android:layout_marginTop="55.0dip"
+        android:background="@drawable/clear_search_result" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_below="@+id/search_input_frame"
+        android:gravity="center"
+        android:text="@string/text_no_match_search"
+        android:textColor="@color/white_aa"
+        android:textSize="12.0dip"
+        android:visibility="gone" />
+
+    <com.skycober.mineral.util.MyListView
+        android:id="@+id/search_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="92.0dip"
+        android:cacheColorHint="@color/transparent"
+        android:clickable="true"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@drawable/dark_divider"
+        android:dividerHeight="1.0dip"
+        android:listSelector="@color/transparent"
+        android:scrollingCache="false" />
+
+    <include
+        android:id="@+id/title_bar"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_bar" />
+
+</RelativeLayout>

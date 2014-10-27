@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" />
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbarLayout"
+        android:background="@color/white"
+        android:padding="5dip" >
+
+        <EditText
+            android:id="@+id/fb_search_edt"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/fb_search_btn"
+            android:hint="请输入关键字"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/fb_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/tag_shape"
+            android:padding="5dip"
+            android:text="搜索"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_layout"
+        android:background="@color/white" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:textSize="15sp" 
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/add_but"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/tag_shape"
+            android:padding="5dip"
+            android:text="创建此标签"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <com.ab.view.AbPullToRefreshListView
+        android:id="@+id/lv_key_words"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/my_select_layout"
+        android:layout_below="@+id/add"
+        android:background="@color/white"
+        android:divider="@drawable/gray_line" />
+
+    <RelativeLayout
+        android:id="@+id/my_select_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:background="@color/gray_55" />
+
+        <TextView
+            android:id="@+id/my_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="我选择的"
+            android:textColor="@color/black" />
+
+        <ListView
+            android:id="@+id/my_select_key_words"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_text"
+            android:background="@color/white"
+            android:divider="@drawable/gray_line" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

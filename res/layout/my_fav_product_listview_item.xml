@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dark_item_bg_selector"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:padding="5.0dip" >
+
+    <ImageView
+        android:id="@+id/product_avatar"
+        android:layout_width="@dimen/near_by_avatar_size"
+        android:layout_height="@dimen/near_by_avatar_size"
+        android:layout_margin="10.0dip"
+        android:background="@drawable/form_bg"
+        android:padding="6dip"
+        android:src="@drawable/default_mineral" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/product_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/product_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pm_btn_selector"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:src="@null"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/product_cancel_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/near_by_btn"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:src="@drawable/icon_profile_subtract_small"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/product_btn_layout"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="8.0dip"
+                        android:singleLine="true"
+                        android:textColor="@color/white_ee"
+                        android:textSize="14.0dip" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_88"
+                    android:textSize="12.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingRight="10.0dip" >
+
+            <TextView
+                android:id="@+id/product_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_photo"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/gray_96"
+                android:textSize="10.0dip" />
+
+            <TextView
+                android:id="@+id/product_liked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_like_2"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/gray_96"
+                android:textSize="10.0dip" />
+
+            <TextView
+                android:id="@+id/product_viewed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_saw_2"
+                android:drawablePadding="2.0dip"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/gray_96"
+                android:textSize="10.0dip" />
+
+            <View
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/product_send_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:text="08/05 11:22"
+                android:textColor="@color/white"
+                android:textSize="10.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

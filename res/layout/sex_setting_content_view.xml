@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="#e3e3e3">
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择性别"
+        />
+    <RadioGroup 
+        android:id="@+id/sex_select"
+   		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+   		
+        >
+        <RadioButton 
+            android:id="@+id/secrecy"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="保密"
+            />
+        <RadioButton 
+             android:id="@+id/male"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="男"
+            />
+        <RadioButton 
+             android:id="@+id/female"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="女"
+            />        
+    </RadioGroup>
+    <Button 
+        android:id="@+id/btn_chance"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        />
+</LinearLayout>

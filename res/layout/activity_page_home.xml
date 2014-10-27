@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/companyGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbarLayout"
+        android:layout_centerHorizontal="true" 
+        android:visibility="gone">
+    </android.support.v4.view.ViewPager>
+
+    <ImageView
+        android:id="@+id/ruzhu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ruzhuqiye" />
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_above="@id/ruzhu"
+		android:layout_marginBottom="60dp"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/woyou"
+            android:textColor="@color/white_fa"
+            android:textSize="20dip" />
+
+        <ImageView
+            android:id="@+id/requirements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@drawable/woyao" />
+    </LinearLayout>
+
+</RelativeLayout>

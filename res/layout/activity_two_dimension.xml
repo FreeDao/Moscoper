@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_fa" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+
+    <com.ab.view.AbPullToRefreshListView
+        android:id="@+id/lv_key_words"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/attention_btn"
+        android:layout_below="@+id/topbarLayout"
+        android:divider="@null"
+        android:dividerHeight="4dip"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/attention_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dip"
+        android:background="@color/blue"
+        android:text="关注"
+        android:textColor="@color/white"
+        android:textSize="20dip" />
+
+</RelativeLayout>

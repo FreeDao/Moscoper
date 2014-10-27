@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/list_item_shape"
+    android:layout_marginBottom="3dp"
+    android:padding="15dip" >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/key_words_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="名称"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="2013...."
+            android:textColor="@color/blue" />
+         <ImageView
+            android:id="@+id/needEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:focusable="false"
+            android:src="@drawable/edit" />
+    </RelativeLayout>
+
+    <com.skycober.mineral.util.MyGridView
+        android:id="@+id/keywords_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:horizontalSpacing="15dip"
+        android:numColumns="3"
+        android:verticalSpacing="15dip" />
+
+    <RelativeLayout
+        android:id="@+id/but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" >
+
+        <!--
+        <Button
+            android:id="@+id/delect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/line_color"
+            android:focusable="false"
+            android:padding="10dip"
+            android:text="删除此条"
+            android:textColor="@color/blue" />        -->
+
+       
+    </RelativeLayout>
+
+</LinearLayout>

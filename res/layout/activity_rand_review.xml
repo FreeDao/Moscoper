@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_fa"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <ImageView
+        android:id="@+id/iv_shake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66.0dip"
+        android:src="@drawable/shake_bg_normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/shake_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5.0dip"
+            android:src="@drawable/loading_progress"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/shake_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="3.0dip"
+            android:text="@string/shake_tips"
+            android:textColor="@color/gray_b7"
+            android:textSize="14.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/beauty_info"
+            android:layout_width="278.0dip"
+            android:layout_height="82.0dip"
+            android:background="@color/white_fa"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/shake_avatar"
+                android:layout_width="64.0dip"
+                android:layout_height="64.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:src="@drawable/default_mineral" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_weight="1.0"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/shake_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="晶石"
+                    android:textColor="@color/blue"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/shake_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="出土于清代，其文化价值源远流长。"
+                    android:textColor="@color/blue"
+                    android:textSize="16.0dip"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/shake_photo_count"
+                        style="@style/UserStatistic"
+                        android:drawableLeft="@drawable/icon_image"
+                        android:text="0"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/shake_fav_count"
+                        style="@style/UserStatistic"
+                        android:layout_marginLeft="10.0dip"
+                        android:drawableLeft="@drawable/icon_like_2"
+                        android:text="0"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/shake_view_count"
+                        style="@style/UserStatistic"
+                        android:layout_marginLeft="10.0dip"
+                        android:drawableLeft="@drawable/icon_eye"
+                        android:text="0"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/shake_send_date"
+                        style="@style/UserStatistic"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="5dip"
+                        android:text="08/03 11:22"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:src="@drawable/icon_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

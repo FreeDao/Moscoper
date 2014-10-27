@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/secondTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbarLayout"
+        android:background="#E3E3E3"
+        android:orientation="horizontal"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/no_atten"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/textview_left_selected_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/company_list"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/atten"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/textview_right_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/company_list_attention"
+            android:textColor="#00CED1"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/secondTitle"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" >
+    </RelativeLayout>
+
+    <!--
+     <com.skycober.mineral.company.MyCompanyViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/secondTitle"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+    </com.skycober.mineral.company.MyCompanyViewPager>    -->
+
+</RelativeLayout>

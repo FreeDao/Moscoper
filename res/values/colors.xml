@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 皮肤相关配置颜色 -->
+    
+    
+    <color name="text_color">#00CED1</color>
+    <color name="line_color">#cdcdcd</color>
+    <color name="blue">#42a1ee</color>
+    
+    
+    <color name="orange_press">#B34F0A</color>
+    <color name="white">#ffffffff</color>
+    <color name="white1">#ffffff</color>
+    <color name="update_notification_fileName_textColor">#fff2f2f2</color>
+    <color name="update_notification_rate_textColor">#ffc1c4c8</color>
+    <color name="rename_dialog_text_color">#ff414141</color>
+    <color name="rename_dialog_title_text_color">#ff707070</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="menu_title_bg">#ff3f4143</color>
+    <color name="voice_tag_color">#ffee5656</color>
+    <color name="kiss_count">#fff34343</color>
+    <color name="kiss_count_hl">#fff2f2f2</color>
+    <color name="citylist_divider">#ff212222</color>
+    <color name="citylist_group_background_color">#ff272828</color>
+    <color name="cancel_like_color">#ffa5a8ac</color>
+    <color name="gray_80">#ff808080</color>
+    <color name="gray_b7">#ffb7b7b7</color>
+    <color name="gray_88">#ff888888</color>
+    <color name="gray_66">#ff666666</color>
+    <color name="white_f1">#fff1f1f1</color>
+    <color name="white_fa">#fffafafa</color>
+    <color name="white_fa_trans_7f">#7ffafafa</color>
+    <color name="white_ee">#ffeeeeee</color>
+    <color name="white_d8">#ffd8d8d8</color>
+    <color name="white_d2">#ffd2d2d2</color>
+    <color name="white_aa">#ffaaaaaa</color>
+    <color name="black_26">#ff262626</color>
+    <color name="black_11">#ff111111</color>
+    <color name="black_1d">#ff1d1d1d</color>
+    <color name="black_25">#ff252525</color>
+    <color name="black">#ff000000</color>
+    <color name="white_tran50">#60ffffff</color>
+    <color name="translucent">#33000000</color>
+    <color name="light_gray">#ff888888</color>
+    <color name="dark_gray">#ff333333</color>
+    <color name="safe_green">#ff5eca0e</color>
+    <color name="danger_red">#ffe96f62</color>
+    <color name="g_main_timer_normal">#ffe96f62</color>
+    <color name="g_his_green">#ff40b00e</color>
+    <color name="g_his_red">#ffbf000c</color>
+    <color name="red">#ffff0000</color>
+    <color name="gamefont">#ff705041</color>
+    <color name="game_head_font">#fffef3f1</color>
+    <color name="orange">#ffff9966</color>
+    <color name="game_task_rule">#ffffcfca</color>
+    <color name="gray_9">#ff999999</color>
+    <color name="gray_96">#ff969696</color>
+    <color name="gray_93">#ff939393</color>
+    <color name="gray_5a">#ff5a5a5a</color>
+    <color name="gray_54">#ff545454</color>
+    <color name="gray_55">#ffe3e3e3</color>
+    <color name="black_3">#ff333333</color>
+    <color name="black_38">#ff383838</color>
+    <color name="anchor_reply">#ffff5e5e</color>
+    <color name="pd_headline_bottom_bg">#99000000</color>
+    <color name="pd_comment_item_bg">#ff2d2e2f</color>
+    <color name="trans75_black">#bf000000</color>
+    <color name="trans75_green">#bf00ff00</color>
+    <color name="dialog_btn_ok">#ffffffff</color>
+    <color name="dialog_btn_cancel">#ff969696</color>
+    <color name="menu_text">#ff707478</color>
+    <color name="default_circle_indicator_fill_color">#fffafafa</color>
+    <color name="default_circle_indicator_page_color">#ff000000</color>
+    <color name="default_circle_indicator_stroke_color">#fffafafa</color>
+    <color name="show_wealth_color">#ffffa96b</color>
+    <color name="window_bg">#88838B8B</color>
+    <color name="crop_background">#737373</color>
+    <!-- 侧边栏 -->
+    
+    <color name="sidebar_btn_hl">#bfbfbf</color>
+    <color name="sidebar_header">#1f1f1f</color>
+    <color name="sidebar_item">#fafafa</color>
+    <color name="sidebar_split">#444444</color>
+    <color name="sidebar_header_text">#939393</color>
+    <color name="sidebar_item_text">#cacaca</color>
+    <color name="Green">#0F0</color>
+
+    <!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+    -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff88ae00</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+
+</resources>

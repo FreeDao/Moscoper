@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_shape"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:padding="5.0dip" >
+
+    <ImageView
+        android:id="@+id/product_avatar"
+        android:layout_width="@dimen/near_by_avatar_size"
+        android:layout_height="@dimen/near_by_avatar_size"
+        android:layout_margin="10.0dip"
+        android:padding="0dip"
+        android:src="@drawable/mineral_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/category_product_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/category_product_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pm_btn_selector"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:src="@null"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/report_product_follow"
+                    android:layout_width="60dip"
+                    android:layout_height="25dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/tag_shape"
+                    android:gravity="center"
+                    android:text="举报"
+                    android:textColor="@color/white_fa"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/category_product_follow"
+                    android:layout_width="60dip"
+                    android:layout_height="25dip"
+                    android:layout_margin="5.0dip"
+                    android:background="@drawable/tag_shape"
+                    android:gravity="center"
+                    android:text="收藏"
+                    android:textColor="@color/white_fa"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/category_product_btn_layout"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/category_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="8.0dip"
+                        android:singleLine="true"
+                        android:textColor="@color/blue"
+                        android:textSize="17.0dip" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/category_product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_88"
+                    android:textSize="12.0dip"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingRight="10.0dip" >
+
+            <TextView
+                android:id="@+id/category_product_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_photo"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/blue"
+                android:textSize="10.0dip" />
+
+            <TextView
+                android:id="@+id/category_product_liked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_like_2"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/blue"
+                android:textSize="10.0dip" />
+
+            <TextView
+                android:id="@+id/category_product_viewed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_saw_2"
+                android:drawablePadding="2.0dip"
+                android:gravity="center_vertical"
+                android:paddingRight="5.0dip"
+                android:singleLine="true"
+                android:textColor="@color/blue"
+                android:textSize="10.0dip" />
+
+            <View
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <TextView
+                android:id="@+id/category_product_send_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="08/05 11:22"
+                android:textColor="@color/blue"
+                android:textSize="15.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

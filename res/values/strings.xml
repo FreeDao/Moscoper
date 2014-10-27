@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">岚腾</string>
+
+    <!-- 企业 -->
+    <string name="attention">已关注</string>
+    <string name="no_attention">未关注</string>
+    <string name="company_list">入驻企业</string>
+    <string name="company_list_attention">已关注企业</string>
+    <string name="company_delete_attention">取消关注</string>
+    <string name="company_delete_black">取消屏蔽</string>
+    <string name="company_waring">温馨提示</string>
+    <string name="company_waring_message">请选择您要关注的标签</string>
+    <string name="company_sure_delete_attention">确定取消关注</string>
+    <string name="tag_attention">已关注标签</string>
+    <string name="tag_no_attention">未关注标签</string>
+
+    <!-- FormEdittext 默认错误提示 -->
+    <string name="error_only_numeric_digits_allowed">Only numeric digits are allowed.</string>
+    <string name="error_this_field_cannot_contain_special_character">This field cannot contain any special character</string>
+    <string name="error_only_standard_letters_are_allowed">Only standard letters are allowed</string>
+    <string name="error_field_must_not_be_empty">The field must not be empty</string>
+    <string name="error_email_address_not_valid">Email address not valid</string>
+    <string name="error_creditcard_number_not_valid">Credit card number is not valid</string>
+    <string name="error_phone_not_valid">请输入正确的电话</string>
+    <string name="error_domain_not_valid">Domain name not valid</string>
+    <string name="error_ip_not_valid">IP Address not valid</string>
+    <string name="error_url_not_valid">Web Url is not valid</string>
+    <string name="login_page_account_name">账号</string>
+    <string name="login_page_account_pwd">密码</string>
+    <string name="login_page_input_box_account_name_hint_text">请输入账号</string>
+    <string name="login_page_input_box_account_pwd_hint_text">请输入密码</string>
+    <string name="login_page_btn_login_text">登录</string>
+    <string name="login_page_btn_regist_text">注册</string>
+    <string name="login_page_btn_forget_pwd_text">忘记密码</string>
+    <string name="login_username_not_empty">用户名不能为空</string>
+    <string name="login_password_not_empty">请输入有效密码</string>
+    <string name="regist_email_not_empty">Email不能为空</string>
+    <string name="regist_send_ing">正在注册，请稍候</string>
+    <string name="regist_failed_rem">注册失败，请检查您的网络！！</string>
+    <string name="regist_succeed_rem">注册成功</string>
+    <string name="common_error_username_registed">用户名已经被注册</string>
+    <string name="common_error_email_registed">邮箱已被注册</string>
+    <string name="login_send_ing">正在登录</string>
+    <string name="login_failed_rem">登录失败，请稍候再试</string>
+    <!-- 通用错误提示 -->
+    <string name="common_error_username_not_exists">用户名或密码错误</string>
+    <string name="common_error_password_not_incorrect">密码不正确</string>
+    <string name="network_disable_error">网络连接不可用，请检查您的网络设置</string>
+    <string name="common_dialog_title_error">错误报告</string>
+    <string name="common_dialog_btn_ok">确定</string>
+    <string name="common_dialog_btn_cancel">取消</string>
+    <string name="exit_app_title">退出应用</string>
+    <string name="exit_app_rem">您确定要退出应用吗？</string>
+    <string name="exit_app_dialog_btn_exit">退出</string>
+    <string name="exit_app_dialog_btn_cancel">取消</string>
+
+    <!-- 侧边栏 -->
+    <string name="sidebar_group_review_text">看一看</string>
+    <string name="sidebar_home_page_text">首页</string>
+    <string name="sidebar_btn_review_text">信息浏览</string>
+    <string name="sidebar_btn_login_text">登录注册</string>
+    <string name="sidebar_btn_user_text">个人中心</string>
+    <string name="sidebar_btn_random_text">随便看看</string>
+    <string name="sidebar_group_manage_text">管理</string>
+    <string name="sidebar_btn_send_text">发布信息</string>
+    <string name="sidebar_btn_my_send_text">我有</string>
+    <string name="sidebar_btn_my_fav_text">收藏信息</string>
+    <string name="sidebar_btn_my_attention_text">中意信息</string>
+    <string name="sidebar_btn_my_company_text">入驻企业</string>
+    <string name="sidebar_group_setting_text">设置</string>
+    <string name="sidebar_btn_my_interest_text">感兴趣的</string>
+    <string name="sidebar_btn_setting_text">设置</string>
+    <string name="sidebar_btn_black_text">黑名单</string>
+    <string name="sidebar_btn_find_text">我要</string>
+    <string name="login">登录</string>
+    <string name="regist">注册</string>
+    <string name="find_pass">找回密码</string>
+    <string name="signature_empty_rem">您还什么没有写噢！</string>
+    <string name="need_to_login">需要先登录噢！</string>
+    <string name="review_login_rem_for_my_send">亲，请您先登录！</string>
+    <string name="review_login_rem_for_my_fav">浏览我收藏的信息需要先登录噢！</string>
+    <string name="review_login_rem_for_my_attention">浏览我关注的信息需要先登录噢！</string>
+    <string name="review_login_rem_for_interest_setting">设置感兴趣的内容需要先登录噢！</string>
+    <!-- 个人主页 -->
+    <string name="home_page_title">个人中心</string>
+    <string name="send_tag">发布数</string>
+    <string name="fav_tag">收藏数</string>
+    <string name="attention_tag">关注数</string>
+    <string name="home_page_item_title_email">电子邮件：</string>
+    <string name="email_hint_text">输入绑定邮箱</string>
+    <string name="home_page_item_title_real_name">真实姓名：</string>
+    <string name="real_name_hint_text">输入真实姓名</string>
+    <string name="home_page_item_title_sex">性别：</string>
+    <string name="sex_hint_text">输入性别</string>
+    <string name="home_page_item_title_birthday">生日：</string>
+    <string name="birthday_hint_text">输入生日</string>
+    <string name="home_page_item_title_msn">MSN：</string>
+    <string name="msn_hint_text">输入MSN</string>
+    <string name="home_page_item_title_qq">QQ：</string>
+    <string name="qq_hint_text">输入QQ</string>
+    <string name="home_page_item_title_office_phone">工作电话：</string>
+    <string name="office_phone_hint_text">输入工作电话</string>
+    <string name="home_page_item_title_mobile_phone">手机：</string>
+    <string name="mobile_phone_hint_text">输入手机号码</string>
+    <string name="home_page_item_title_home_phone">座机：</string>
+    <string name="home_phone_hint_text">输入座机号码</string>
+    <string name="home_page_item_title_attention">关注的信息：</string>
+    <string name="attention_hint_text">输入关注的信息标签，便于分类，以逗号分隔</string>
+    <string name="sex_male">男</string>
+    <string name="sex_female">女</string>
+    <string name="sex_secrecy">保密</string>
+    <string name="no_date">还没有填写哦</string>
+    <string name="user_basic_send_failed_rem">更新用户信息失败，请稍后再试</string>
+    <string name="user_basic_send_ing">正在更新用户信息</string>
+    <string name="user_basic_succeed_rem">更新个人信息成功</string>
+    <string name="get_user_info_failed_rem">获取用户信息失败，请稍后再试</string>
+    <string name="user_basic_dialog_save_rem_title">您确认保存修改吗？</string>
+    <string name="key_words_delect_rem_title">您确认删除该标签么？</string>
+    <string name="user_basic_dialog_save_title">是否保存修改</string>
+    <string name="user_basic_dialog_save_message">按右上角的对勾保存哦</string>
+    <string name="user_basic_dialog_to_save_message">请点击确认保存修改</string>
+    <string name="key_words_delect_to_delect_message">请点击确认删除</string>
+    <string name="user_basic_dialog_save_rem_btn_save">确认</string>
+    <string name="user_basic_dialog_save_rem_btn_cancel">取消</string>
+    <string name="dialog_title_sex">请选择性别</string>
+    <string name="upload_avatar_send_ing">正在上传头像</string>
+    <string name="upload_avatar_failed_rem">上传头像失败，请稍后再试</string>
+    <string name="unkonw_avatar_failed_rem">暂不支持此格式，请使用png,jpg格式</string>
+    <string name="add_photo_from_camera">从照相机里获取</string>
+    <string name="add_photo_from_pics">从相册里获取</string>
+    <string name="add_photo_btn_cancel">取消</string>
+    <string name="visit_count_format">访客  %1$d</string>
+    <string name="product_detail_desc_hint">还没有写详细描述信息耶！</string>
+    <string name="user_info_loading">正在加载用户信息</string>
+    <string name="user_info_load_failed_rem">加载用户信息失败，请稍后再试</string>
+    <!-- 分类浏览 -->
+
+    <string name="category_review_page_title">信息浏览</string>
+    <string name="get_category_ing">正在获取分类信息</string>
+    <string name="get_key_words_ing">正在获取标签信息</string>
+    <string name="get_category_failed_rem">获取分类信息失败</string>
+    <string name="get_key_words_ing_failed_rem">获取标签信息失败</string>
+
+    <!-- 信息详情 -->
+    <string name="prod_detail_btn_change_logo">更换图片</string>
+    <string name="prod_detail_btn_fav">收藏</string>
+    <string name="prod_detail_btn_chance_fav">取消收藏</string>
+    <string name="prod_detail_btn_cancel_fav">取消收藏</string>
+    <string name="product_detail_title">信息详情</string>
+    <string name="faved_tag">收藏数</string>
+    <string name="attentioned_tag">关注数</string>
+    <string name="visited_tag">访问数</string>
+    <string name="make_onsale_sending">正在上架</string>
+    <string name="make_onsale_succeed_rem">信息已上架</string>
+    <string name="make_offsale_sending">正在下架</string>
+    <string name="make_offsale_succeed_rem">信息已下架</string>
+    <string name="make_onsale_failed_rem">上架失败，请稍后再试</string>
+    <string name="make_offsale_failed_rem">下架失败，请稍后再试</string>
+    <string name="prod_detail_status_is_onsale">已上架</string>
+    <string name="prod_detail_status_not_onsale">未上架</string>
+    <string name="deal_with_support">支持</string>
+    <string name="deal_with_unsupport">不支持</string>
+    <string name="remove_prod_dialog_title">移除信息</string>
+    <string name="remove_prod_dialog_message">确定要移除这条信息吗？</string>
+    <string name="remove_prod_dialog_btn_pos">移除</string>
+    <string name="remove_prod_dialog_btn_neg">取消</string>
+    <string name="remove_prod_succeed_rem">成功移除信息</string>
+    <string name="remove_prod_failed_rem">移除信息失败，请稍后再试</string>
+    <string name="comment_list_get_ing">正在获取评论列表</string>
+    <string name="comment_list_get_failed">评论列表加载失败，请稍后再试</string>
+    <string name="comment_count_format">评论  %1$d</string>
+    <string name="remove_prod_send_ing">正在移除信息</string>
+    <string name="share_content_format">%1$s分享了喜欢的信息 (%2$s)-------%3$s </string>
+    <!-- 随便看看 -->
+    <string name="random_review_page_title">随便看看</string>
+    <string name="shake_tips">摇一摇，寻找您感兴趣的信息吧</string>
+    <string name="shake_failed_rem">暂时没有摇到任何东西哦~</string>
+    <!-- 我发布的信息 -->
+    <string name="my_send_product_page_title">我有</string>
+    <string name="sub_tab_published">已上架</string>
+    <string name="sub_tab_unpublished">未上架</string>
+    <string name="get_myfavslist_failed_rem">获取我发布的信息失败</string>
+    <string name="get_myfavslist_ing1">正在获取收藏信息列表</string>
+    <string name="get_myfavslist_ing">正在获取我要列表</string>
+    <string name="get_prod_send_list_ing">正在获取我有列表</string>
+    <string name="get_prod_send_list_failed">获取我有列表失败，请稍候再试</string>
+    <!-- 我收藏的信息 -->
+    <string name="my_fav_product_page_title">收藏信息</string>
+    <string name="key_words_manager_page_title">我要</string>
+    <string name="add_fav_failed_rem">添加收藏失败，请稍后再试</string>
+    <string name="removew_attention_failed_rem">删除中意信息，请稍后再试</string>
+    <string name="add_fav_success_rem">添加收藏成功</string>
+    <string name="add_fav_send_ing">正在添加收藏</string>
+    <string name="remove_attention_send_ing">正在删除中意信息</string>
+    <string name="chance_fav_failed_rem">取消收藏失败，请稍后再试</string>
+    <string name="add_key_words_rem">添加标签失败，请稍后再试</string>
+    <string name="get_num_rem">获取匹配数目失败，请稍后再试</string>
+    <string name="chance_fav_success_rem">取消收藏成功</string>
+    <string name="chance_fav_send_ing">正在取消收藏</string>
+    <string name="upload_image_send_ing">正在更新logo</string>
+    <string name="upload_image_failed_rem">更新logo失败</string>
+    <string name="add_key_words_send_ing">正在添加标签</string>
+    <string name="get_words_num_ing">稍等，正在查看有多少匹配信息</string>
+    <string name="chance_rem">您确定要取消收藏吗？</string>
+    <string name="chance_btn_pos">确定</string>
+    <string name="chance_btn_neg">取消</string>
+    <!-- 我关注的信息 -->
+    <string name="my_black_product_page_title">黑名单</string>
+    <string name="my_attention_product_page_title">中意信息</string>
+    <string name="get_myAttentionlist_failed_rem">获取中意信息列表失败，请稍候再试</string>
+    <string name="get_myAttentionlist_ing">正在获取中意信息列表</string>
+    <string name="attention_tag_list_get_ing">正在获取关注标签信息</string>
+    <string name="attention_tag_list_get_failed">获取标签信息失败，请稍后再试</string>
+
+    <!-- 感兴趣的 -->
+    <string name="interest_setting_page_title">感兴趣的</string>
+    <string name="add_category_btn_text">添加分类</string>
+    <string name="add_tag_btn_text">添加标签</string>
+    <string name="interest_empty_rem">快点添加分类或标签丰富自己的兴趣吧</string>
+    <string name="add_tag_dialog_title">添加自定义标签</string>
+    <string name="add_tag_input_hint">输入标签</string>
+    <string name="add_tag_dialog_pos_btn">确定</string>
+    <string name="add_tag_dialog_neg_btn">取消</string>
+    <string name="add_tag_error_empty">标签不能为空</string>
+    <string name="add_tag_error_repeat">已经包含此标签了</string>
+    <string name="add_tag_success">成功添加标签</string>
+    <string name="remove_tag_dialog_title">移除标签</string>
+    <string name="remove_tag_message">您确定要移除标签“%1$s”吗？</string>
+    <string name="remove_tag_dialog_pos_btn">确定</string>
+    <string name="remove_tag_dialog_neg_btn">取消</string>
+    <string name="remove_tag_success">成功移除标签</string>
+    <string name="remove_tag_fail">移除标签失败，请稍后再试</string>
+    <string name="select_category_page_title">设置感兴趣的分类</string>
+    <string name="add_my_tag_send_ing">正在添加标签</string>
+    <string name="add_my_tag_failed_rem">添加标签失败，请稍后再试</string>
+    <string name="add_my_tag_succeed_rem">添加标签成功</string>
+    <string name="remove_tag_sending">正在移除标签</string>
+    <string name="remove_tag_failed_rem">移除标签失败，请稍后再试</string>
+    <string name="remove_tag_succeed_rem">移除标签成功</string>
+    <!-- 选取感兴趣的分类 -->
+    <string name="group_btn_all_select">全选</string>
+    <string name="group_btn_all_un_select">取消全选</string>
+    <string name="add_category_rem_no_data">分类列表为空</string>
+    <string name="setting_my_attention_cat_tag_send_ing">正在保存分类信息</string>
+    <string name="setting_my_attention_cat_tag_failed_rem">保存分类信息失败，请稍后再试</string>
+    <string name="setting_my_attention_cat_tag_succeed_rem">保存分类信息成功</string>
+
+    <!-- 搜索页面 -->
+    <string name="search_page_title">搜索</string>
+    <string name="hint_search">请输入信息名称</string>
+    <string name="search">搜索</string>
+    <string name="text_no_match_search">没有找到匹配的信息</string>
+    <string name="input_keyword_not_empty">输入的信息名称不能为空</string>
+    <string name="search_send_ing">正在查询</string>
+    <string name="search_failed_rem">查询失败，请稍后再试</string>
+
+    <!-- 发布信息 -->
+    <string name="add_product_page_title">发布信息</string>
+    <string name="add_product_sub_title_category">所属分类</string>
+    <string name="add_product_sub_title_name">信息名称</string>
+    <string name="add_product_sub_title_desc">详细描述</string>
+    <string name="product_desc_hint">详细描述下您的信息吧！</string>
+    <string name="add_product_sub_title_brief">详细描述</string>
+    <string name="add_product_sub_title_price">出售价格</string>
+    <string name="add_product_sub_title_weight">重量（克）</string>
+    <string name="add_product_sub_title_keywords">信息标签</string>
+    <string name="add_product_sub_title_parent">信息分类</string>
+    <string name="add_product_sub_title_city">所在城市</string>
+    <string name="add_product_sub_title_product">所在省份</string>
+    <string name="add_product_sub_title_compatibility">匹配度</string>
+    <string name="num_dialog_title">获取到相关信息的数量</string>
+    <string name="num_dialog_btn_continue">继续编辑</string>
+    <string name="num_dialog_btn_post">发布</string>
+    <string name="add_product_sub_title_deal">支持交易</string>
+    <string name="keywords_hint">使用空格分隔</string>
+    <string name="add_product_sub_title_logo">信息Logo</string>
+    <string name="add_product_send_ing">正在发布信息</string>
+    <string name="add_product_succeed_rem">发布信息成功</string>
+    <string name="add_product_failed_rem">发布信息失败，请稍候再试</string>
+    <string name="ok">确定</string>
+    <string name="change_prod_name_dialog_title">信息名称</string>
+    <string name="prod_name_input_hint">输入信息名称</string>
+    <string name="prod_name_not_empty">信息名称不能为空</string>
+    <string name="change_brief_dialog_title">简要描述</string>
+    <string name="prod_brief_input_hint">输入简要描述</string>
+    <string name="prod_brief_not_empty">简要描述不能为空</string>
+    <string name="change_weight_dialog_title">信息重量</string>
+    <string name="prod_weight_input_hint">输入信息重量</string>
+    <string name="prod_weight_not_empty">信息重量不能为空</string>
+    <string name="change_price_dialog_title">出售价格</string>
+    <string name="prod_price_input_hint">输入出售价格</string>
+    <string name="prod_price_not_empty">出售价格不能为空</string>
+    <string name="change_keywords_dialog_title">创建信息标签</string>
+    <string name="change_category_dialog_title">没有找到您搜索的分类，请您新建</string>
+    <string name="search_keywords_dialog_title">没有找到您搜索的标签，请您新建</string>
+    <string name="prod_keywords_input_hint">输入关键字，空格分隔</string>
+    <string name="keywords_input_hint">输入关键字</string>
+    <string name="prod_prientid_input_hint">输入信息分类</string>
+    <string name="prod_keywords_not_empty">关键字不能为空</string>
+    <string name="add_prod_select_category_page_title">选择信息分类</string>
+    <string name="select_key_words_title">选择信息标签</string>
+    <string name="select_key_words_title1">发布需求</string>
+    <string name="change_detail_desc_dialog_title">信息详细描述</string>
+    <string name="prod_detail_desc_input_hint">输入详细描述信息</string>
+    <string name="prod_detail_desc_not_empty">详细描述不能为空</string>
+    <string name="remove_pic_dialog_title">删除图片</string>
+    <string name="remove_pic_dialog_message">确定要删除这张图片吗？</string>
+    <string name="remove_pic_btn_del">删除</string>
+    <string name="remove_pic_btn_cancel">取消</string>
+    <string name="remove_pic_succeed_rem">已成功删除图片</string>
+    <string name="remove_pic_failed_rem">删除图片失败，请稍后再试</string>
+    <string name="category_info_not_empty">信息分类信息不能为空</string>
+    <string name="add_prod_detail_name_not_empty">信息名称不能为空</string>
+    <string name="add_prod_detail_desc_not_empty">信息详细描述不能为空</string>
+    <string name="upload_pic_send_ing">正在上传第%1$d张照片</string>
+    <string name="upload_pic_succeed_rem">上传照片成功</string>
+    <string name="upload_pic_failed_rem">上传照片失败，请稍后再试</string>
+
+    <!-- 编辑信息 -->
+    <string name="update_product_page_title">编辑信息</string>
+    <string name="update_product_load_ing">正在加载信息信息</string>
+    <string name="load_product_info_failed">加载信息信息失败，请稍后再试</string>
+    <string name="update_product_send_ing">正在更新信息信息</string>
+    <string name="update_product_succeed_rem">更新信息信息成功</string>
+    <string name="update_product_failed_rem">更新信息信息失败，请稍后再试</string>
+    <string name="remove_pic_sending">正在删除第%1$d张图片</string>
+    <string name="update_exit_save_rem">需要保存修改？</string>
+    <string name="update_exit_dialog_btn_pos">保存</string>
+    <string name="update_exit_dialog_btn_neg">放弃</string>
+
+    <!-- 设置 -->
+    <string name="setting_page_title">设置</string>
+    <string name="setting_item_push">接收推送</string>
+    <string name="setting_item_update_pwd">修改账户密码</string>
+    <string name="setting_item_qrcode">扫一扫</string>
+    <string name="setting_item_check_update">检查更新</string>
+    <string name="setting_item_feedback">意见反馈</string>
+    <string name="setting_item_about">关于</string>
+    <string name="setting_item_logout">退出登录</string>
+    <string name="setting_item_login">登录</string>
+    <string name="push_close_rem">关闭推送，您将收不到您关注信息的最新消息</string>
+    <string name="push_close_btn_pos">确认</string>
+    <string name="push_close_btn_neg">取消</string>
+    <string name="logout_rem">您确定要注销登录吗？</string>
+    <string name="logout_btn_pos">确定</string>
+    <string name="logout_btn_neg">取消</string>
+
+    <!-- 扫一扫 -->
+    <string name="extension_qrcode_scan_help_tips">"将取景框对准二维码，\n即可自动扫描。"</string>
+    <string name="scan_qrcode_processing">已扫描，正在处理...</string>
+    <string name="no_wechat_rem">很抱歉，请您对准再次扫描</string>
+    <!-- 意见反馈 -->
+    <string name="feedback_page_title">意见反馈</string>
+    <string name="feedback_content_hint">请留下您的宝贵意见，谢谢~</string>
+    <string name="feedback_contact_hint">请留下您的联系方式（QQ/手机/邮箱均可）</string>
+    <!-- 修改账户密码 -->
+    <string name="old_pass_hint">输入当前密码</string>
+    <string name="new_pass_hint">输入新密码</string>
+    <string name="confirm_pass_hint">再输入新密码</string>
+    <string name="old_pass_not_empty">您输入的当前密码不正确</string>
+    <string name="new_pass_not_empty">密码不能为空,请输入合法字符</string>
+    <string name="confirm_pass_not_empty">确认密码不能为空</string>
+    <string name="double_pass_incorrect">两次输入新密码不一致</string>
+    <string name="update_pwd_send_ing">正在修改密码</string>
+    <string name="update_pwd_failed">修改密码失败，请稍后再试</string>
+    <string name="update_pwd_succeed">已成功修改密码</string>
+    <!-- 关于 -->
+    <string name="version_format">版本号：%1$s</string>
+    <string name="copy_right">Copyright © 2013 Yes366. Inc. All Rights Reserved</string>
+    <!-- 登录 -->
+    <string name="login_page_title">登录</string>
+    <string name="account_page_input_box_hint_user_name">用户名：字母或数字不超过15位</string>
+    <string name="account_page_input_box_hint_email">邮箱：和个人中心的邮箱保持一致</string>
+    <string name="account_page_input_box_hint_password">密码：不小于6个字符</string>
+    <string name="cancel">取  消</string>
+    <string name="login_page_btn_login">登  录</string>
+    <!-- 注册 -->
+    <string name="regist_page_title">注册</string>
+    <string name="regist_page_btn_regist">注  册</string>
+    <!-- 找回密码 -->
+    <string name="find_pass_page_title">找回密码</string>
+    <string name="find_page_page_btn_reset">找回密码</string>
+
+    <!-- 空间 -->
+    <string name="zone_page_title">空间</string>
+    <string name="zone_btn_add_attention">+关注</string>
+    <string name="zone_btn_minus_attention">-关注</string>
+    <string name="supplier_id_not_empty">发布者ID不能为空，请联系客服人员</string>
+    <string name="add_attention_people_send_ing">正在添加关注</string>
+    <string name="add_attention_people_failed_rem">添加关注失败，请稍后再试</string>
+    <string name="add_attention_people_succeed_rem">添加关注成功</string>
+    <string name="cancel_attention_people_send_ing">正在取消关注</string>
+    <string name="cancel_attention_people_failed_rem">取消关注失败，请稍后再试</string>
+    <string name="cancel_attention_people_succeed_rem">取消关注成功</string>
+    <!-- 发表评论 -->
+    <string name="add_comment_page_title">发表评论</string>
+    <string name="add_comment_hint_text">快写下你的评论吧！</string>
+    <string name="comment_content_not_empty">评论内容不能为空</string>
+    <string name="comment_send_ing">正在发表评论</string>
+    <string name="send_comment_failed_rem">发表评论失败，请稍后再试</string>
+    <string name="send_comment_succeed_rem">发表评论成功</string>
+
+</resources>

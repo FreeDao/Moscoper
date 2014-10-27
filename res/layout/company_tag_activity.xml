@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E3E3" >
+
+    <RelativeLayout
+        android:id="@+id/company_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/logo"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/logo"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/praise_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/company_name"
+            android:layout_below="@id/company_name"
+            android:padding="5dp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/black_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/praise_num"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/praise_num"
+            android:padding="5dp"
+            android:textColor="#000000" />
+        <Button 
+            android:id="@+id/sweep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫码关注"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/black_num"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/tag_shape"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/company_info"
+        android:padding="5dp"
+        android:layout_marginTop="1dp" >
+
+        <TextView
+            android:id="@+id/searchTagBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tag_shape"
+            android:text="搜索"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:layout_alignParentRight="true" />
+
+        <AutoCompleteTextView
+            android:id="@+id/searchTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/searchTagBut"
+            android:background="@drawable/v3_search_edit_bg"
+            android:hint="请输入关键词"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchLayout"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tag_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchLayout"
+        android:background="#E3E3E3"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tag_no_att"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/textview_left_selected_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tag_no_attention"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tag_att"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/textview_right_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tag_attention"
+            android:textColor="#00CED1"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tag_title"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/company_tag_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:background="#EEEEE0" >
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

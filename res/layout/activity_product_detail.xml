@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_fa" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <com.skycober.mineral.util.MyListView
+        android:id="@+id/lvComments"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbarLayout"
+        android:divider="@color/line_color"
+        android:dividerHeight="0.5dip" >
+    </com.skycober.mineral.util.MyListView>
+
+</RelativeLayout>

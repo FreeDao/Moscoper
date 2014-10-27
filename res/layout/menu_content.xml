@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white_fa"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_fa"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/menu_padding_left"
+        android:paddingRight="@dimen/menu_item_padding_right" >
+
+        <Button
+            android:id="@+id/title_button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_btn_selector" />
+
+        <Button
+            android:id="@+id/title_button_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:id="@+id/tx_gift_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2.0dip"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:maxWidth="65.0dip"
+            android:textColor="@color/white"
+            android:textSize="9.0dip"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/title_button_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingTop="8.0dip"
+            android:src="@null"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_fa"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="8.0dip" >
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_marginTop="8.0dip"
+            android:background="@drawable/menu_default_head_bg"
+            android:scaleType="center"
+            android:src="@drawable/menu_default_head" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:drawablePadding="3.0dip"
+            android:textColor="@color/white"
+            android:textSize="16.0dip"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/user_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:textColor="@color/white_aa"
+            android:textSize="10.0dip"
+            android:visibility="invisible"
+            android:hint="@string/signature_empty_rem"
+            android:textColorHint="@color/white_aa" />
+
+        <LinearLayout
+            android:id="@+id/user_info_msgs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:baselineAligned="false"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <ImageView
+                    android:id="@+id/menu_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@null"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/menu_comment_count"
+                    style="@style/NotifyCountText"
+                    android:layout_toRightOf="@+id/menu_comment" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <ImageView
+                    android:id="@+id/menu_privmsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@null"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/menu_privmsg_count"
+                    style="@style/NotifyCountText"
+                    android:layout_toRightOf="@+id/menu_privmsg" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <ImageView
+                    android:id="@+id/menu_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@null"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/menu_like_count"
+                    style="@style/NotifyCountText"
+                    android:layout_toRightOf="@+id/menu_like" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menu_gift_indicate"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" >
+
+                <ImageView
+                    android:id="@+id/menu_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@null"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/menu_gift_count"
+                    style="@style/NotifyCountText"
+                    android:layout_toRightOf="@+id/menu_gift" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="90.0dip"
+            android:layout_height="34.0dip"
+            android:layout_marginTop="16.0dip"
+            android:background="@drawable/play_btn_selector"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:background="@color/white_fa" />
+
+        <ListView
+            android:id="@+id/menu_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@drawable/dark_divider"
+            android:dividerHeight="1.0dip"
+            android:scrollingCache="false" />
+    </LinearLayout>
+
+</LinearLayout>

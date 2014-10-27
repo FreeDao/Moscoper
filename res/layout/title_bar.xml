@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/titile_bar_height"
+    android:background="@drawable/bg_title"
+    android:padding="5dp"
+    android:clipChildren="false" >
+
+    <ImageButton
+        android:id="@+id/title_button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:paddingLeft="6.0dip"
+        android:src="@drawable/title_menu" />
+
+    <ImageButton
+        android:id="@+id/title_button_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:paddingRight="6.0dip"
+        android:src="@drawable/camera_selector"
+        android:textColor="@color/white" />
+
+    <ImageButton
+        android:id="@+id/title_button_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/title_button_right"
+        android:background="@null"
+        android:paddingRight="2.0dip"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/title_button_right"
+        android:layout_toRightOf="@+id/title_button_left"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/menu_title_size" />
+
+    <ImageView
+        android:id="@+id/title_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/title_button_right"
+        android:layout_toRightOf="@+id/title_button_left"
+        android:src="@drawable/title_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

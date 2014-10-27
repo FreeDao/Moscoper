@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+    <TextView 
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="名称："
+        android:layout_below="@id/title_bar"
+        android:padding="10dp"
+        android:textSize="20sp"/>
+    <TextView 
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="厂商："
+        android:layout_below="@id/name"
+        android:textSize="15sp"
+        android:padding="10dp"/>
+    
+    <Button 
+        android:id="@+id/attion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address"
+        android:layout_margin="20dp"
+        android:text="关注"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/tag_shape"/>
+
+</RelativeLayout>

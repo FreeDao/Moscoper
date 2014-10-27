@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="side_menus">
+        <item >分类浏览</item>
+        <item >随便看看</item>
+        <item >我发布的藏品</item>
+        <item >我收藏的藏品</item>
+        <item >我关注的藏品</item>
+        <item >感兴趣的</item>
+        <item >搜索</item>
+    </string-array>
+
+</resources>

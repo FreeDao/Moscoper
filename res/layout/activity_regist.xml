@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:whatever="http://schemas.android.com/apk/res/com.skycober.mineral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_fa" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbarLayout"
+        android:paddingTop="15dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" >
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:src="@drawable/mineral_logo" />
+
+            
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/etAccountName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivLogo"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/login_input"
+                android:hint="@string/account_page_input_box_hint_user_name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                whatever:emptyErrorString="@string/login_username_not_empty"
+                whatever:testType="nocheck" />            
+			<!--
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/etAccountEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAccountName"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/login_input"
+                android:hint="@string/account_page_input_box_hint_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                whatever:emptyErrorString="@string/regist_email_not_empty"
+                whatever:testType="nocheck" />
+                -->
+
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/etAccountPwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAccountName"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/login_input"
+                android:hint="@string/account_page_input_box_hint_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:singleLine="true"
+                whatever:emptyErrorString="@string/login_password_not_empty"
+                whatever:testType="nocheck" />
+
+            <Button
+                android:id="@+id/btnRegist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAccountPwd"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/orange_btn_selector"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/regist_page_btn_regist"
+                android:textColor="@color/white"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnRegist"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/play_btn_follow_selector"
+                android:paddingBottom="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="18.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

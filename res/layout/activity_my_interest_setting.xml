@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_fa" >
+
+    <include
+        android:id="@+id/topbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/empty_rem"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbarLayout" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/diamond_three"
+            android:gravity="center"
+            android:lineSpacingExtra="3.0dip"
+            android:text="@string/interest_empty_rem"
+            android:textColor="@color/gray_b7"
+            android:textSize="14.0dip"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:paddingBottom="15dip" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/headLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbarLayout"
+        android:layout_margin="8dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAddCategory"
+            style="@style/DialogCancel"
+            android:layout_width="0.0dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="4dip"
+            android:layout_weight="1.0"
+            android:background="@color/blue"
+            android:singleLine="true"
+            android:text="@string/add_category_btn_text"
+            android:textSize="16sp"
+            android:textColor="@color/white_ee" />
+
+        <Button
+            android:id="@+id/btnAddTag"
+            style="@style/DialogCancel"
+            android:layout_width="0.0dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="4dip"
+            android:layout_weight="1.0"
+            android:background="@color/blue"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:text="@string/add_tag_btn_text"
+            android:textColor="@color/white_ee" />
+    </LinearLayout>
+
+    <com.js.cloudtags.KeywordsFlow
+        android:id="@+id/keywordsflow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/headLayout"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="25dip" />
+
+    
+
+</RelativeLayout>
