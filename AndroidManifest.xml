@@ -8,7 +8,7 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="17" />
 
-    <!-- #########githu##########声明SDK使用的相关权限###################### -->
+    <!-- #########githu##########声明SDK使用的相关权限###########I am a new branch########### -->
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <!-- 允许访问振动设备 -->
