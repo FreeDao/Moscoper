@@ -59,7 +59,7 @@
     <!-- 侧边栏 -->
     <string name="sidebar_group_review_text">看一看</string>
     <string name="sidebar_home_page_text">首页</string>
-    <string name="sidebar_btn_review_text">信息浏览</string>
+    <string name="sidebar_btn_review_text">会话列表</string>
     <string name="sidebar_btn_login_text">登录注册</string>
     <string name="sidebar_btn_user_text">个人中心</string>
     <string name="sidebar_btn_random_text">随便看看</string>
@@ -320,11 +320,11 @@
 
     <!-- 编辑信息 -->
     <string name="update_product_page_title">编辑信息</string>
-    <string name="update_product_load_ing">正在加载信息</string>
-    <string name="load_product_info_failed">加载信息失败，请稍候再试</string>
-    <string name="update_product_send_ing">正在更新信息</string>
-    <string name="update_product_succeed_rem">更新信息成功</string>
-    <string name="update_product_failed_rem">更新信息失败，请稍候再试</string>
+    <string name="update_product_load_ing">正在加载信息信息</string>
+    <string name="load_product_info_failed">加载信息信息失败，请稍后再试</string>
+    <string name="update_product_send_ing">正在更新信息信息</string>
+    <string name="update_product_succeed_rem">更新信息信息成功</string>
+    <string name="update_product_failed_rem">更新信息信息失败，请稍后再试</string>
     <string name="remove_pic_sending">正在删除第%1$d张图片</string>
     <string name="update_exit_save_rem">需要保存修改？</string>
     <string name="update_exit_dialog_btn_pos">保存</string>

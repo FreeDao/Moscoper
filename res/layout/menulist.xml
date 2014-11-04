@@ -42,7 +42,7 @@
             android:textColor="@color/black_11"
             android:textSize="@dimen/sidebar_item_textsize" />
 
-        <!--
+       
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.5dip"
@@ -53,7 +53,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/sidebar_btn_selector"
-            android:drawableLeft="@drawable/menu_icon_home"
+            android:drawableLeft="@drawable/menu_icon_feedback"
             android:drawablePadding="6dip"
             android:gravity="left|center_vertical"
             android:paddingBottom="@dimen/sidebar_item_paddingbottom"
@@ -62,7 +62,7 @@
             android:text="@string/sidebar_btn_review_text"
             android:textColor="@color/black_11"
             android:textSize="@dimen/sidebar_item_textsize" />
-        -->
+      
 
         <View
             android:layout_width="fill_parent"

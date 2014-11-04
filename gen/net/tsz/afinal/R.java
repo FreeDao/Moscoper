@@ -12,7 +12,7 @@ public final class R {
 		public static final int settingswindow_out_anim = 0x7f040005;
 	}
 	public static final class color {
-		public static final int skin_color_button = 0x7f0b0075;
+		public static final int skin_color_button = 0x7f0b0097;
 	}
 	public static final class dimen {
 		public static final int textSizeS1 = 0x7f080000;
@@ -46,9 +46,9 @@ public final class R {
 		public static final int more_btn_normal = 0x7f0200a8;
 	}
 	public static final class id {
-		public static final int btnCancel = 0x7f060088;
-		public static final int btnDown = 0x7f0600e5;
-		public static final int btnTop = 0x7f0600e4;
+		public static final int btnCancel = 0x7f0600a5;
+		public static final int btnDown = 0x7f060102;
+		public static final int btnTop = 0x7f060101;
 	}
 	public static final class layout {
 		public static final int item_dialog = 0x7f03003d;

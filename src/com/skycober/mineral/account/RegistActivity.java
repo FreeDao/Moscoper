@@ -157,8 +157,8 @@ public class RegistActivity extends BaseActivity {
 										Toast.LENGTH_SHORT).show();
 							}
 						} else {
-							SettingUtil.getInstance(RegistActivity.this)
-									.saveUserInfo(mRec.getUserId(), mRec);
+//							SettingUtil.getInstance(RegistActivity.this)
+//									.saveUserInfo(mRec.getUserId(), mRec);
 							Toast.makeText(RegistActivity.this,
 									R.string.regist_succeed_rem,
 									Toast.LENGTH_SHORT).show();

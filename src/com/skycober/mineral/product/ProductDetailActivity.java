@@ -1,5 +1,9 @@
 package com.skycober.mineral.product;
 
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
+import io.rong.imlib.RongIMClient.ConnectCallback;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +15,13 @@ import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -126,7 +132,7 @@ public class ProductDetailActivity extends BaseActivity {
 	private Intent dataIntent;
 	private Dialog operationDialog;
 	private MyRemDialog removeProdDialog;
-	private TextView praise_btn, black_btn;
+	private TextView praise_btn, black_btn, chat_btn;
 
 	private Dialog myOpearationDialog;
 	// private String mcategoryName;
@@ -146,6 +152,8 @@ public class ProductDetailActivity extends BaseActivity {
 	private boolean IsPraise = false;
 	// 是否被屏蔽
 	private boolean IsBlackUser = false;
+
+	private Handler handler;
 
 	private List<ImageFragment> fragmentList;
 
@@ -198,6 +206,7 @@ public class ProductDetailActivity extends BaseActivity {
 		// headerView.findViewById(R.id.imageViewPage);
 
 		productLogo = (ImageView) headerView.findViewById(R.id.product_logo);
+		chat_btn = (TextView) headerView.findViewById(R.id.chat_btn);
 
 		logo = FinalBitmap.create(this);
 		logo.configBitmapMaxHeight(80);
@@ -270,6 +279,7 @@ public class ProductDetailActivity extends BaseActivity {
 			black_btn.setVisibility(View.GONE);
 		}
 		black_btn.setOnClickListener(onBlackClickListener);
+
 		isBlack();
 
 		// 判断是否是用户自己发布的信息
@@ -277,11 +287,57 @@ public class ProductDetailActivity extends BaseActivity {
 			praise_btn.setVisibility(View.GONE);
 			black_btn.setVisibility(View.GONE);
 			btnReport.setVisibility(View.GONE);
+			chat_btn.setVisibility(View.GONE);
 			switchOperationStatus(FavType.ChangeLogo);
 		} else {
 			praise_btn.setVisibility(View.VISIBLE);
 			black_btn.setVisibility(View.VISIBLE);
 			btnReport.setVisibility(View.VISIBLE);
+			chat_btn.setVisibility(View.VISIBLE);
+			handler = new Handler();
+			chat_btn.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					handler.post(new Runnable() {
+
+						@Override
+						public void run() {
+							// TODO Auto-generated method stub
+							if (RongIM.getInstance() == null) {
+								String userId = SettingUtil.getInstance(ProductDetailActivity.this)
+										.getValue(SettingUtil.KEY_LOGIN_USER_ID,
+												SettingUtil.DEFAULT_LOGIN_USER_ID);
+								String rootKey = SettingUtil.SETTING_USER_PREF
+										+userId;
+								SharedPreferences sp = getSharedPreferences(
+										rootKey, Context.MODE_PRIVATE);
+								String token = sp.getString("token", null);
+
+								RongIM.connect(token, new ConnectCallback() {
+
+									@Override
+									public void onSuccess(String arg0) {
+										// TODO Auto-generated method stub
+
+									}
+
+									@Override
+									public void onError(ErrorCode arg0) {
+										// TODO Auto-generated method stub
+
+									}
+								});
+							}
+							RongIM.getInstance().startPrivateChat(
+									ProductDetailActivity.this,
+									productRec.getUserId(),
+									productRec.getRealName());
+						}
+					});
+				}
+			});
 			if (productRec.isInFav()) {
 				switchOperationStatus(FavType.Cancel);
 			} else {
@@ -399,8 +455,11 @@ public class ProductDetailActivity extends BaseActivity {
 				.getValue(SettingUtil.KEY_LOGIN_USER_ID,
 						SettingUtil.DEFAULT_LOGIN_USER_ID);
 		if (userId.equals(productRec.getUserId())) {
+
 			isMine = true;
+
 		} else {
+
 			isMine = false;
 			readyToAddView(productRec.getId());
 		}

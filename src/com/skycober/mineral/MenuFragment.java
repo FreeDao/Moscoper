@@ -1,5 +1,9 @@
 package com.skycober.mineral;
 
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient.ConnectCallback;
+import io.rong.imlib.RongIMClient.ConnectCallback.ErrorCode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +22,7 @@ import com.skycober.mineral.product.KeyWordsActivity;
 import com.skycober.mineral.product.MyAttentionProductActivity;
 import com.skycober.mineral.product.MyFavProductActivity;
 import com.skycober.mineral.product.MySendProductActivity;
+import com.skycober.mineral.product.ProductDetailActivity;
 import com.skycober.mineral.product.RandReviewActivity;
 import com.skycober.mineral.product.SearchActivity;
 import com.skycober.mineral.setting.InterestSettingActivity;
@@ -28,6 +33,7 @@ import com.skycober.mineral.widget.MyRemDialog;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -57,8 +63,8 @@ public class MenuFragment extends Fragment {
 	private Button sidebar_btn8;
 
 	private void initView(View v) {
-		// Button sidebar_btn1 = (Button) v.findViewById(R.id.sidebar_btn01);
-		// sidebar_btn1.setOnClickListener(onClickListener);
+		Button sidebar_btn1 = (Button) v.findViewById(R.id.sidebar_btn01);// 会话列表
+		sidebar_btn1.setOnClickListener(onClickListener);
 		Button sidebar_btn3 = (Button) v.findViewById(R.id.sidebar_btn03);// 我有
 		sidebar_btn3.setOnClickListener(onClickListener);
 		Button sidebar_btn4 = (Button) v.findViewById(R.id.sidebar_btn04);// 收藏信息
@@ -107,10 +113,35 @@ public class MenuFragment extends Fragment {
 			case R.id.sidebar_btn11:// 首页
 				newContent = new AppHomePageActivity();
 				break;
-			// case R.id.sidebar_btn01:// 分类浏览
-			//
-			// newContent = new CategoryReviewActivity();
-			// break;
+			case R.id.sidebar_btn01:// 会话列表
+				if (RongIM.getInstance() == null) {
+					String userId = SettingUtil.getInstance(
+							getActivity()).getValue(
+							SettingUtil.KEY_LOGIN_USER_ID,
+							SettingUtil.DEFAULT_LOGIN_USER_ID);
+					String rootKey = SettingUtil.SETTING_USER_PREF + userId;
+					SharedPreferences sp = getActivity().getSharedPreferences(rootKey,
+							Context.MODE_PRIVATE);
+					String token = sp.getString("token", null);
+
+					RongIM.connect(token, new ConnectCallback() {
+
+						@Override
+						public void onSuccess(String arg0) {
+							// TODO Auto-generated method stub
+
+						}
+
+						@Override
+						public void onError(ErrorCode arg0) {
+							// TODO Auto-generated method stub
+
+						}
+					});
+				}
+				RongIM.getInstance().startConversationList(getActivity());
+				// newContent = new CategoryReviewActivity();
+				break;
 			case R.id.sidebar_btn03:// 我发布的藏品（我有）
 				if (isLogin) {
 					newContent = new MySendProductActivity();

@@ -26,6 +26,8 @@ public class RequestUrls {
 
 	public static final String UPDATAAPK_URL = "/api/2/system/version";
 
+	// 获取融云的用户Token
+	public static final String URI = "https://api.cn.rong.io/user/getToken.json";
 	// 首页企业列表
 	public static final String HOMEPAGE_COMPANY_LIST_URL = "/api/2/enterprise/indexList";
 
@@ -71,8 +73,8 @@ public class RequestUrls {
 	public static final String GET_MY_FAV_LIST_URL = "/api/2/goods/myFavs/offset/[offset]/count/[count]";
 	public static final String GET_MY_ATTENTION_LIST_URL = "/api/2/goods/myWantList/offset/[offset]/count/[count]";
 	public static final String GET_PRODUCT_DETAIL_URL = "/api/2/goods/view/goods_id/[goods_id]";
-	
-	//我有列表
+
+	// 我有列表
 	public static final String GET_USERS_GOODS_LIST_URL = "/api/2/goods/myList/type/publish/offset/[offset]/count/[count]";
 	public static final String GET_RANDOM_GOODS_URL = "/api/2/goods/random";
 	public static final String MAKE_ON_SALE = "/api/2/goods/makeOnSale/[goods_id]";

@@ -1,6 +1,8 @@
 package com.skycober.mineral;
 
 
+import io.rong.imkit.RongIM;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +28,7 @@ public class MyApplication extends Application {
          super.onCreate();
          JPushInterface.setDebugMode(true); 	
          JPushInterface.init(this);   
+         RongIM.init(this, "pvxdm17jx5lmr", R.drawable.mineral_logo);
        if (SettingUtil.getInstance(getApplicationContext()).getValue(SettingUtil.KEY_ACCEPT_PUSH_NOTIFICATION, true)) {
    		JPushInterface.resumePush(getApplicationContext());
 
