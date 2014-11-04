@@ -1,5 +1,6 @@
 package com.skycober.mineral.setting;
 
+import io.rong.imkit.RongIM;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -423,6 +424,7 @@ public class SettingActivity extends FragBaseActivity {
 
 				@Override
 				public void onClick(View v) {
+					RongIM.getInstance().disconnect(false);
 					SettingUtil.getInstance(getActivity()).clearLoginInfo();
 					initSettingInfo();
 					

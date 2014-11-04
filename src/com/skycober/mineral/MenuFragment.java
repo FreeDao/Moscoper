@@ -114,32 +114,37 @@ public class MenuFragment extends Fragment {
 				newContent = new AppHomePageActivity();
 				break;
 			case R.id.sidebar_btn01:// 会话列表
-				if (RongIM.getInstance() == null) {
-					String userId = SettingUtil.getInstance(
-							getActivity()).getValue(
-							SettingUtil.KEY_LOGIN_USER_ID,
-							SettingUtil.DEFAULT_LOGIN_USER_ID);
-					String rootKey = SettingUtil.SETTING_USER_PREF + userId;
-					SharedPreferences sp = getActivity().getSharedPreferences(rootKey,
-							Context.MODE_PRIVATE);
-					String token = sp.getString("token", null);
+				if (isLogin) {
+					if (RongIM.getInstance() == null) {
+						String userId = SettingUtil.getInstance(getActivity())
+								.getValue(SettingUtil.KEY_LOGIN_USER_ID,
+										SettingUtil.DEFAULT_LOGIN_USER_ID);
+						String rootKey = SettingUtil.SETTING_USER_PREF + userId;
+						SharedPreferences sp = getActivity()
+								.getSharedPreferences(rootKey,
+										Context.MODE_PRIVATE);
+						String token = sp.getString("token", null);
 
-					RongIM.connect(token, new ConnectCallback() {
+						RongIM.connect(token, new ConnectCallback() {
 
-						@Override
-						public void onSuccess(String arg0) {
-							// TODO Auto-generated method stub
+							@Override
+							public void onSuccess(String arg0) {
+								// TODO Auto-generated method stub
 
-						}
+							}
 
-						@Override
-						public void onError(ErrorCode arg0) {
-							// TODO Auto-generated method stub
+							@Override
+							public void onError(ErrorCode arg0) {
+								// TODO Auto-generated method stub
 
-						}
-					});
+							}
+						});
+					}
+					RongIM.getInstance().startConversationList(getActivity());
+				} else {
+					showLoginRem(R.string.review_login_rem_for_my_send);
 				}
-				RongIM.getInstance().startConversationList(getActivity());
+
 				// newContent = new CategoryReviewActivity();
 				break;
 			case R.id.sidebar_btn03:// 我发布的藏品（我有）
