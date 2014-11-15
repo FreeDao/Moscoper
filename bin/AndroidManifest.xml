@@ -5,7 +5,7 @@
     android:versionName="2.0.7" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
     <!-- ###################声明SDK使用的相关权限###################### -->
@@ -57,6 +57,8 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
 
     <application
         android:name="com.skycober.mineral.MyApplication"
@@ -78,6 +80,9 @@
         <activity
             android:name="com.skycober.mineral.FragmentChangeActivity"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
         </activity>
         <!-- 集成Umeng -->
         <activity android:name="com.umeng.fb.ConversationActivity" />

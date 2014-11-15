@@ -55,13 +55,17 @@ public final class CaptureActivityHandler extends Handler {
 	private final SweepActivity activity;
 	private final DecodeThread decodeThread;
 	private State state;
+	private String eid;
+	private String tag_ids;
 
 	private enum State {
 		PREVIEW, SUCCESS, DONE
 	}
 
 	public CaptureActivityHandler(SweepActivity activity,
-			Vector<BarcodeFormat> decodeFormats, String characterSet) {
+			Vector<BarcodeFormat> decodeFormats, String characterSet,String eid,String tag_ids) {
+		this.eid = eid;
+		this.tag_ids = tag_ids;
 		this.activity = activity;
 		decodeThread = new DecodeThread(activity, decodeFormats, characterSet,
 				new com.skycober.mineral.widget.ViewfinderResultPointCallback(
@@ -97,7 +101,7 @@ public final class CaptureActivityHandler extends Handler {
 			Bundle bundle = message.getData();
 			Bitmap barcode = bundle == null ? null : (Bitmap) bundle
 					.getParcelable(DecodeThread.BARCODE_BITMAP);
-			String str_result = ((Result) message.obj).getText();
+			final String str_result = ((Result) message.obj).getText();
 			System.out.println("====str_result===="+str_result);
 			String match = "^[0-9]{13}";
 			boolean b = str_result.matches(match);
@@ -118,6 +122,9 @@ public final class CaptureActivityHandler extends Handler {
 									+ new JSONObject(t.toString()));
 							Intent tagIntent = new Intent(activity,TagdetialActivity.class);
 							tagIntent.putExtra("jsonStr", t.toString());
+							tagIntent.putExtra("barcodes", str_result);
+							tagIntent.putExtra("eid", eid);
+							tagIntent.putExtra("tag_ids", tag_ids);
 							activity.startActivity(tagIntent);
 						} catch (JSONException e) {
 							// TODO Auto-generated catch block

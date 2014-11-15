@@ -35,22 +35,29 @@ public class FragmentChangeActivity extends SlidingFragmentActivity {
 	public static MenuFragment leftFragment;
 
 	private FeedbackAgent agent;
+	private String category =null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		Intent intent = getIntent();
+		if(intent.hasExtra("category")){
+			category = intent.getStringExtra("category");
+		}
 		// set the Above View
 		if (savedInstanceState != null)
 			mContent = getSupportFragmentManager().getFragment(
 					savedInstanceState, "mContent");
+		
 		if (mContent == null)
 			mContent = new AppHomePageActivity();// Ê×Ò³
-
+		Bundle bundle = new Bundle();
+		bundle.putString("category", category);
+		mContent.setArguments(bundle);
 		// set the Above View
 		setContentView(R.layout.content_frame);
 		MyApplication.getInstance().addActivity(this);
-		Intent intent = getIntent();
+		
 		String action = intent.getAction();
 
 		getSupportFragmentManager().beginTransaction()

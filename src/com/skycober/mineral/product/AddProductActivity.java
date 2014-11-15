@@ -61,6 +61,7 @@ import com.skycober.mineral.bean.KeyWordsRec;
 import com.skycober.mineral.bean.PicRec;
 import com.skycober.mineral.bean.ProductRec;
 import com.skycober.mineral.bean.TagCategoryRec;
+import com.skycober.mineral.db.DBUtils;
 import com.skycober.mineral.network.CityModel;
 import com.skycober.mineral.network.CityModel.CityItemModel;
 import com.skycober.mineral.network.ErrorCodeStant;
@@ -274,12 +275,17 @@ public class AddProductActivity extends BaseActivity {
 		}
 	};
 	private LocationUtil locationUtil;
+	private String category;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_product);
-
+		Intent intent = getIntent();
+		if(intent.hasExtra("category")){
+			category = intent.getStringExtra("category");
+		}
+		
 		InitTopbar();
 		parentIdLayout.performClick();
 		mProductRec = new ProductRec();
@@ -1155,6 +1161,11 @@ public class AddProductActivity extends BaseActivity {
 						// 发布成功，返回前一页面，进行刷新数据
 						Toast.makeText(getApplicationContext(), "发布成功", 1)
 								.show();
+						DBUtils dbUtils = new DBUtils(AddProductActivity.this);
+						ProductRec pro = new ProductRec();
+						pro.setTagCatId(mProductRec.getTagCatId());
+						pro.setTagCatName(tvparentId.getText().toString());
+						dbUtils.insert(pro);
 						Intent data = getIntent();
 						if (null == data)
 							data = new Intent();
@@ -1534,7 +1545,7 @@ public class AddProductActivity extends BaseActivity {
 		Intent mIntent = new Intent(AddProductActivity.this,
 				SelectCategoryForAddProdActivity.class);
 		mIntent.putExtra("type", "publish");
-
+		mIntent.putExtra("category", category);
 		startActivityForResult(mIntent, REQUEST_CODE_FOR_SELECT_CATEGORY);
 	}
 

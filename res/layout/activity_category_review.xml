@@ -75,10 +75,22 @@
             android:textColor="@color/white" />
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/addShortCut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/tag_shape"
+        android:text="添加快捷方式"
+        android:textColor="#ffffff"
+        android:visibility="visible" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/add" >
+        android:layout_above="@id/addShortCut"
+        android:layout_below="@id/add">
 
         <com.ab.view.AbPullToRefreshListView
             android:id="@+id/lv_category"

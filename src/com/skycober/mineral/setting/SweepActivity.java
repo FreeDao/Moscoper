@@ -32,13 +32,15 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
 /**
  * 扫一扫
+ * 
  * @author 新彬
- *
+ * 
  */
-public class SweepActivity extends BaseActivity implements Callback{
-	//private static final String TAG = "SweepActivity";
+public class SweepActivity extends BaseActivity implements Callback {
+	// private static final String TAG = "SweepActivity";
 
 	@ViewInject(id = R.id.title_button_left)
 	ImageButton btnLeft;
@@ -57,11 +59,19 @@ public class SweepActivity extends BaseActivity implements Callback{
 	private boolean playBeep;
 	private static final float BEEP_VOLUME = 0.10f;
 	private boolean vibrate;
-	
+	private String eid;
+	private String tag_ids;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sweep);
+		Intent intent = getIntent();
+		if (intent.hasExtra("eid")) {
+			eid = intent.getStringExtra("eid");
+			tag_ids = intent.getStringExtra("tag_ids");
+		}
+
 		initTopBar();
 		CameraManager.init(this);
 		viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
@@ -84,12 +94,12 @@ public class SweepActivity extends BaseActivity implements Callback{
 			finish();
 		}
 	};
-	
+
 	private View.OnClickListener btnRightClickListener = new View.OnClickListener() {
-		
+
 		@Override
 		public void onClick(View v) {
-			if(null != handler){
+			if (null != handler) {
 				Message msg = handler.obtainMessage(R.id.restart_preview);
 				handler.sendMessage(msg);
 			}
@@ -97,7 +107,7 @@ public class SweepActivity extends BaseActivity implements Callback{
 	};
 
 	protected void onResume() {
-		SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);  
+		SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
 		SurfaceHolder surfaceHolder = surfaceView.getHolder();
 		if (hasSurface) {
 			initCamera(surfaceHolder);
@@ -117,7 +127,7 @@ public class SweepActivity extends BaseActivity implements Callback{
 		vibrate = true;
 		super.onResume();
 	};
-	
+
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -144,7 +154,7 @@ public class SweepActivity extends BaseActivity implements Callback{
 		}
 		if (handler == null) {
 			handler = new CaptureActivityHandler(this, decodeFormats,
-					characterSet);
+					characterSet, eid,tag_ids);
 		}
 	}
 
@@ -181,22 +191,24 @@ public class SweepActivity extends BaseActivity implements Callback{
 
 	public void handleDecode(Result obj, Bitmap barcode) {
 		inactivityTimer.onActivity();
-//		txtResult.setText(obj.getBarcodeFormat().toString() + ":"
-//				+ obj.getText());
+		// txtResult.setText(obj.getBarcodeFormat().toString() + ":"
+		// + obj.getText());
 		String value = obj.getText();
-		//ExceptionRemHelper.showExceptionReport(SweepActivity.this, value);
+		// ExceptionRemHelper.showExceptionReport(SweepActivity.this, value);
 		Toast.makeText(this, value, 1).show();
 		try {
-			Intent intent = new Intent(Intent.ACTION_VIEW); //声明要打开另一个VIEW.
-			String guanzhu_URL = value; //这是你公共帐号的二维码的实际内容。可以用扫描软件扫一下就得到了。这是我的公共帐号地址。
-//			intent.setPackage("com.tencent.mm"); //直接制定要发送到的程序的包名。也可以不制定。就会弹出程序选择器让你手动选木程序。
-			intent.putExtra(Intent.EXTRA_SUBJECT,"Share"); 
+			Intent intent = new Intent(Intent.ACTION_VIEW); // 声明要打开另一个VIEW.
+			String guanzhu_URL = value; // 这是你公共帐号的二维码的实际内容。可以用扫描软件扫一下就得到了。这是我的公共帐号地址。
+			// intent.setPackage("com.tencent.mm");
+			// //直接制定要发送到的程序的包名。也可以不制定。就会弹出程序选择器让你手动选木程序。
+			intent.putExtra(Intent.EXTRA_SUBJECT, "Share");
 			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			intent.setData(Uri.parse(guanzhu_URL)); //设置要传递的内容。
+			intent.setData(Uri.parse(guanzhu_URL)); // 设置要传递的内容。
 			startActivity(intent);
 		} catch (Exception e) {
 			e.printStackTrace();
-//			Toast.makeText(SweepActivity.this, "关注失败，请稍后再试", Toast.LENGTH_SHORT).show();
+			// Toast.makeText(SweepActivity.this, "关注失败，请稍后再试",
+			// Toast.LENGTH_SHORT).show();
 		}
 	}
 

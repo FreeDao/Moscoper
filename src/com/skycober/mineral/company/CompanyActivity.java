@@ -26,7 +26,7 @@ import com.skycober.mineral.util.SettingUtil;
  * @author CF
  * 
  */
-public class CompanyActivity extends FragmentActivity{
+public class CompanyActivity extends FragmentActivity {
 
 	private ImageButton topLeft;
 	private TextView toptitle;
@@ -57,8 +57,9 @@ public class CompanyActivity extends FragmentActivity{
 				.equalsIgnoreCase(SettingUtil.DEFAULT_LOGIN_USER_ID);
 		// 如果没登陆跳转登录界面，
 		if (hasLogin) {
-//			View view = inflater.inflate(R.layout.company_activity, container,
-//					false);
+			// View view = inflater.inflate(R.layout.company_activity,
+			// container,
+			// false);
 			listener = new MyOnClickListener();
 			// 标题栏
 			topLeft = (ImageButton) findViewById(R.id.title_button_left);
@@ -69,13 +70,13 @@ public class CompanyActivity extends FragmentActivity{
 			topLeft.setOnClickListener(listener);
 			// 关注和未关注title
 			attention = (TextView) findViewById(R.id.atten);
-			noAttention = (TextView)findViewById(R.id.no_atten);
+			noAttention = (TextView) findViewById(R.id.no_atten);
 			attention.setOnClickListener(listener);
 			noAttention.setOnClickListener(listener);
 
 			// viewpager
 			// viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-			
+
 			companyListFragment = new CompanyListFragment();
 			Bundle bundle_list = new Bundle();
 			bundle_list.putString("url", RequestUrls.SERVER_BASIC_URL
@@ -92,20 +93,21 @@ public class CompanyActivity extends FragmentActivity{
 			// .getSupportFragmentManager());
 			// viewPager.setAdapter(viewPagerAdapter);
 			// viewPagerAdapter.notifyDataSetChanged();
-			
+
 		} else {
 			Intent intent = new Intent(this, LoginActivity.class);
 			startActivity(intent);
 		}
-		
+
 	}
-//
-//	@Override
-//	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//			Bundle savedInstanceState) {
-//		// TODO Auto-generated method stub
-//	
-//	}
+
+	//
+	// @Override
+	// public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	// Bundle savedInstanceState) {
+	// // TODO Auto-generated method stub
+	//
+	// }
 
 	// public CompanyFragment instanceFragment(String url) {
 	// CompanyFragment fragment = null;
@@ -170,7 +172,7 @@ public class CompanyActivity extends FragmentActivity{
 			case R.id.no_atten:
 				// viewPager.setCurrentItem(0);
 				manager.beginTransaction()
-						.replace(R.id.fragment,companyListFragment ).commit();
+						.replace(R.id.fragment, companyListFragment).commit();
 
 				attention
 						.setBackgroundResource(R.drawable.textview_right_shape);

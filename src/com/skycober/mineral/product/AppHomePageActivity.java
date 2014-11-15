@@ -9,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.skycober.mineral.FragBaseActivity;
 import com.skycober.mineral.FragmentChangeActivity;
@@ -21,7 +21,6 @@ import com.skycober.mineral.R;
 import com.skycober.mineral.account.LoginActivity;
 import com.skycober.mineral.company.CompanyActivity;
 import com.skycober.mineral.company.head_page_company.HomePageFragment;
-import com.skycober.mineral.updateApk.UpDataUtils;
 import com.skycober.mineral.util.AndroidIdUtil;
 import com.skycober.mineral.util.AndroidIdUtil.onAndroidIdGetFailure;
 import com.skycober.mineral.util.AndroidIdUtil.onAndroidIdGetSuccess;
@@ -40,6 +39,10 @@ public class AppHomePageActivity extends FragBaseActivity {
 	private MyRemDialog logOutRemDialog;
 	private ViewPager viewpage;
 	private List<HomePageFragment> fragmentList;
+	private Button myMoscoper;
+	private TextView categoryTv;
+	private String category = null;
+	private boolean isMy;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -99,12 +102,17 @@ public class AppHomePageActivity extends FragBaseActivity {
 		FragmentChangeActivity.slideMenu.setTag("back");
 
 		View v = inflater.inflate(R.layout.activity_page_home, null);
+		Bundle bundle = getArguments();
+		if (bundle != null) {
+			category = bundle.getString("category");
+		}
+
 		// viewpage = (ViewPager) v.findViewById(R.id.companyGridView);
 		// getFragment();//企业直通车
 		// ViewPageAdapter viewpageAdaper = new ViewPageAdapter(getActivity()
 		// .getSupportFragmentManager());
 		// viewpage.setAdapter(viewpageAdaper);
-
+		categoryTv = (TextView) v.findViewById(R.id.catgory);
 		TextView tvTitle = (TextView) v.findViewById(R.id.title_text);
 		tvTitle.setVisibility(View.GONE);
 		v.findViewById(R.id.title_icon).setVisibility(View.VISIBLE);
@@ -120,6 +128,8 @@ public class AppHomePageActivity extends FragBaseActivity {
 		information = (ImageView) v.findViewById(R.id.information);
 		information.setOnClickListener(informationClickListener);// 我有
 		inCompany = (ImageView) v.findViewById(R.id.ruzhu);// 入住企业
+		myMoscoper = (Button) v.findViewById(R.id.moscoper);
+
 		inCompany.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -146,6 +156,25 @@ public class AppHomePageActivity extends FragBaseActivity {
 					// Toast.makeText(getActivity(), "亲，请您先登录！",
 					// Toast.LENGTH_SHORT).show();
 					showLoginRem(R.string.review_login_rem_for_my_send);
+				}
+
+			}
+		});
+
+		myMoscoper.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+
+				if (!isMy) {
+					category = "myMoscoper";
+					categoryTv.setVisibility(View.VISIBLE);
+					isMy = true;
+				} else {
+					category = null;
+					categoryTv.setVisibility(View.GONE);
+					isMy = false;
 				}
 
 			}
@@ -222,6 +251,7 @@ public class AppHomePageActivity extends FragBaseActivity {
 				Intent intent = new Intent(
 						AppHomePageActivity.this.getActivity(),
 						AddKeywordsActivity.class);
+				intent.putExtra("category", category);
 				startActivity(intent);
 			} else {
 				showLoginRem(R.string.review_login_rem_for_my_send);
@@ -244,6 +274,7 @@ public class AppHomePageActivity extends FragBaseActivity {
 				Intent intent = new Intent(
 						AppHomePageActivity.this.getActivity(),
 						AddProductActivity.class);
+				intent.putExtra("category", category);
 				startActivity(intent);
 			} else {
 				showLoginRem(R.string.review_login_rem_for_my_send);

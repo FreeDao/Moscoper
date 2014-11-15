@@ -8,6 +8,7 @@ import net.tsz.afinal.http.AjaxCallBack;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.Intent.ShortcutIconResource;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -34,13 +35,16 @@ import com.ab.net.AbHttpCallback;
 import com.ab.net.AbHttpItem;
 import com.ab.view.AbPullToRefreshListView;
 import com.skycober.mineral.BaseActivity;
+import com.skycober.mineral.FragmentChangeActivity;
 import com.skycober.mineral.R;
 import com.skycober.mineral.account.CategoryService;
 import com.skycober.mineral.account.ServerResponseParser;
+import com.skycober.mineral.bean.ProductRec;
 import com.skycober.mineral.bean.TagCategoryRec;
 import com.skycober.mineral.company.CharacterParser;
 import com.skycober.mineral.company.SideBar;
 import com.skycober.mineral.company.SideBar.OnTouchingLetterChangedListener;
+import com.skycober.mineral.db.DBUtils;
 import com.skycober.mineral.network.BaseResponse;
 import com.skycober.mineral.network.ErrorCodeStant;
 import com.skycober.mineral.network.ResponseTagCategory;
@@ -75,12 +79,17 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 	private TextView dialog;
 	private int offSet = 0;
 	private int have = AbConstant.HAVE;
+	private String category = null;
+	private Button addShortCut;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_category_review);
 		Intent intent = getIntent();
+		if (intent.hasExtra("category")) {
+			category = intent.getStringExtra("category");
+		}
 		add_layOut = (RelativeLayout) findViewById(R.id.add);
 		if (intent.hasExtra("type")) {
 			type = intent.getExtras().getString("type");
@@ -94,6 +103,15 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 		btnRight.setImageResource(R.drawable.check_btn_selector);
 		btnRight.setVisibility(View.VISIBLE);
 		btnRight.setOnClickListener(btnrightClickListener);
+		addShortCut = (Button) findViewById(R.id.addShortCut);// 添加快捷方式
+		addShortCut.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				addShortCut();
+			}
+		});
 		sideBar = (SideBar) findViewById(R.id.sidrbar);
 		dialog = (TextView) findViewById(R.id.dialog);
 		sideBar.setTextView(dialog);
@@ -203,7 +221,7 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 						&& lastSelectnumber < categoryRecList.size()) {
 					categoryRecList.get(lastSelectnumber).setChecked(false);
 				}
-				int pos = arg2-1;
+				int pos = arg2 - 1;
 				categoryRecList.get(pos).setChecked(true);
 				lastSelectnumber = pos;
 				categoryAdapter.setCategoryList(categoryRecList);
@@ -212,7 +230,56 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 				btnRight.performClick();
 			}
 		});
-		startToGetCategoryReview(false, null);
+		if ("myMoscoper".equals(category)) {
+			DBUtils dbUtils = new DBUtils(this);
+			categoryRecList.clear();
+			List<ProductRec> list = dbUtils.query();
+			if (list != null && list.size() != 0) {
+				for (ProductRec rec : list) {
+					TagCategoryRec tagRec = new TagCategoryRec();
+					tagRec.setTagCatID(rec.getTagCatId());
+					tagRec.setTagCatName(rec.getTagCatName());
+					categoryRecList.add(tagRec);
+				}
+				getSelling(categoryRecList);
+				// 根据a-z进行排序源数据
+				Collections.sort(categoryRecList, pinyinComparator);
+				categoryAdapter.setCategoryList(categoryRecList);
+			} else {
+				Toast.makeText(this, "您还没发送过信息", Toast.LENGTH_SHORT).show();
+			}
+
+		} else {
+			startToGetCategoryReview(false, category);
+		}
+
+	}
+
+	public void addShortCut() {
+		Intent shortcut = new Intent(
+				"com.android.launcher.action.INSTALL_SHORTCUT");
+		search = fb_search_edt.getText().toString();
+		if (search == null||"".equals(search)) {
+			Toast.makeText(this, "请您先搜索分类，再创建快捷方式", Toast.LENGTH_SHORT).show();
+		} else {
+			shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME, search);
+			// shortcut.putExtra("duplicate", true);
+
+			Intent shortcutIntent = new Intent(this,
+					FragmentChangeActivity.class);
+			// shortcutIntent.setClassName(this, this.getClass().getName());
+			shortcutIntent.putExtra("category", search);
+			shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
+
+			// 快捷方式的图标
+			ShortcutIconResource iconRes = Intent.ShortcutIconResource
+					.fromContext(this, R.drawable.mineral_logo);
+			shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconRes);
+
+			sendBroadcast(shortcut);
+			Toast.makeText(this, "已成功添加‘"+search+"’快捷方式", Toast.LENGTH_SHORT).show();
+		}
+
 	}
 
 	@Override
@@ -227,10 +294,10 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 
 				mIntent.putExtra(KEY_CATEGORY_REC, categoryRec);
 
-			} 
-//			else {
-//				Toast.makeText(getApplicationContext(), "请选择信息分类", 1).show();
-//			}
+			}
+			// else {
+			// Toast.makeText(getApplicationContext(), "请选择信息分类", 1).show();
+			// }
 			setResult(RESULT_OK, mIntent);
 			SelectCategoryForAddProdActivity.this.finish();
 			return true;
@@ -283,10 +350,10 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 
 				mIntent.putExtra(KEY_CATEGORY_REC, categoryRec);
 
-			} 
-//			else {
-//				Toast.makeText(getApplicationContext(), "请选择信息分类", 1).show();
-//			}
+			}
+			// else {
+			// Toast.makeText(getApplicationContext(), "请选择信息分类", 1).show();
+			// }
 			setResult(RESULT_OK, mIntent);
 			SelectCategoryForAddProdActivity.this.finish();
 			// finish();
@@ -326,9 +393,9 @@ public class SelectCategoryForAddProdActivity extends BaseActivity {
 		private LayoutInflater inflater;
 		private OnSelectClickListener onSelectClickListener;
 
-//		public OnSelectClickListener getOnSelectClickListener() {
-//			return onSelectClickListener;
-//		}
+		// public OnSelectClickListener getOnSelectClickListener() {
+		// return onSelectClickListener;
+		// }
 
 		// public void setOnSelectClickListener(
 		// OnSelectClickListener onSelectClickListener) {

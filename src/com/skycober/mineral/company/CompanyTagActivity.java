@@ -89,6 +89,7 @@ public class CompanyTagActivity extends FragmentActivity implements
 	private TextView black_num;
 
 	private Button sweep;
+	private String tag_ids = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -106,8 +107,11 @@ public class CompanyTagActivity extends FragmentActivity implements
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+
 				Intent intent = new Intent(CompanyTagActivity.this,
 						SweepActivity.class);
+				intent.putExtra("eid", eid);
+				intent.putExtra("tag_ids", tag_ids);
 				startActivity(intent);
 			}
 		});
@@ -380,7 +384,6 @@ public class CompanyTagActivity extends FragmentActivity implements
 			findViewById(R.id.tag_title).setVisibility(View.VISIBLE);
 			findViewById(R.id.line).setVisibility(View.VISIBLE);
 			findViewById(R.id.company_tag_viewpage).setVisibility(View.VISIBLE);
-
 		}
 		return super.onKeyDown(keyCode, event);
 	}
@@ -407,12 +410,25 @@ public class CompanyTagActivity extends FragmentActivity implements
 								.parserCateTage(jsonObject);
 						List<CatgerTag> done = tagResult.getDone_tag_list();
 						List<CatgerTag> notdone = tagResult.getDonot_tag_list();
+
 						List<Tag> tagList = null;
+
 						if (done != null) {
 							tagList = new ArrayList<Tag>();
+							tagList.clear();
+							tag_ids = "";
 							for (int i = 0; i < done.size(); i++) {
 								tagList.addAll(done.get(i).getTag_list());
 							}
+							for (int i = 0; i < tagList.size(); i++) {
+								if ("".equals(tag_ids)) {
+									tag_ids = tagList.get(0).getTag_id();
+								} else {
+									tag_ids = tag_ids + ","
+											+ tagList.get(i).getTag_id();
+								}
+							}
+							System.out.println("===done====" + tag_ids);
 						}
 						if (notdone != null) {
 							for (int i = 0; i < notdone.size(); i++) {

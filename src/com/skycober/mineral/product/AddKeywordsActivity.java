@@ -41,6 +41,7 @@ import com.skycober.mineral.bean.KeyWordsListRec;
 import com.skycober.mineral.bean.KeyWordsRec;
 import com.skycober.mineral.bean.ProductRec;
 import com.skycober.mineral.bean.TagCategoryRec;
+import com.skycober.mineral.db.DBUtils;
 import com.skycober.mineral.network.BaseResponse;
 import com.skycober.mineral.network.CityModel;
 import com.skycober.mineral.network.ErrorCodeStant;
@@ -210,6 +211,7 @@ public class AddKeywordsActivity extends BaseActivity {
 
 	private boolean isSave;
 	private boolean isEdit;
+	private String category;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -218,6 +220,7 @@ public class AddKeywordsActivity extends BaseActivity {
 		init();
 		initTitle();
 		Intent intent = getIntent();
+		category = intent.getStringExtra("category");
 		isEdit = intent.getBooleanExtra("isEdit", false);
 		if (!isEdit) {
 			parentIdLayout.performClick();
@@ -733,7 +736,7 @@ public class AddKeywordsActivity extends BaseActivity {
 		Intent mIntent = new Intent(AddKeywordsActivity.this,
 				SelectCategoryForAddProdActivity.class);
 		mIntent.putExtra("type", "find");
-
+		mIntent.putExtra("category", category);
 		startActivityForResult(mIntent, REQUEST_CODE_FOR_SELECT_CATEGORY);
 	}
 
@@ -963,6 +966,11 @@ public class AddKeywordsActivity extends BaseActivity {
 									br.getErrorCode())) {
 						Toast.makeText(AddKeywordsActivity.this, "发布成功",
 								Toast.LENGTH_SHORT).show();
+						DBUtils dbUtils = new DBUtils(AddKeywordsActivity.this);
+						ProductRec pro = new ProductRec();
+						pro.setTagCatId(mProductRec.getTagCatId());
+						pro.setTagCatName(tvparentId.getText().toString());
+						dbUtils.insert(pro);
 						setResult(RESULT_OK);
 						finish();
 					} else {

@@ -155,7 +155,8 @@ public class CompanyTagListFragment extends FragBaseActivity {
 					tag.setChecked(false);
 					attention_tag.remove(tag);
 					check.setChecked(false);
-					v.setBackgroundColor(getResources().getColor(R.color.gray_55));
+					v.setBackgroundColor(getResources().getColor(
+							R.color.gray_55));
 				} else {
 					tag.setChecked(true);
 					attention_tag.add(tag);

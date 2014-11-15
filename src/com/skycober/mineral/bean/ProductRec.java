@@ -112,14 +112,14 @@ public class ProductRec implements Serializable {
 	@Transient
 	public static final String ResponseTagCatId = "tag_cat_id";
 	/**
-	 * 新分类ID
+	 * 分类ID
 	 */
 	private String tagCatId;
 
 	@Transient
 	public static final String ResponseTagCatName = "tag_cat_name";
 	/**
-	 * 新分类名
+	 * 分类名
 	 */
 	private String tagCatName;
 	@Transient
